@@ -1,38 +1,227 @@
-.App {
-  text-align: center;
+a{
+  text-decoration: underline;
+  color: white;
+  border: none;
+  outline: none;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.CodeMirror-scroll {
+  overflow: scroll !important;
+  /* margin-bottom: -50px; */
+  /* margin-right: -50px; */
+  /* padding-bottom: 50px; */
+  height: 100%;
+  outline: none;
+  position: relative;
+  z-index: 0;
+  scrollbar-width: thin;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.contain{
+  height:100vh;
+  width:100%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar{
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+height:50px;
+width:100%;
+background-color:black;
+/* border-bottom: 10px solid white; */
+/* box-shadow: 0px 0px 20px white; */
+box-shadow: 0px 10px 10px -5px rgba(255, 255, 255, 0.3);
+
+}
+.title_box{
+  display: flex;
+  align-items: center;
+  gap:10px;
+  /* background-color: aqua; */
+  margin-left: 20px;
+}
+
+.title_box i{
+  color:white;
+  font-size: 2rem;
+}
+.title_box span{
+  font-size: 20px;
   color: white;
 }
+.developer_icon{
+  display: flex;
+  justify-content: right;
+width:300px;
+  margin-right: 20px;
+  /* background-color: aquamarine; */
+}
+.developer_contain{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap:10px;
+}
+.details{
+  /* display: none; */
+  /* background-color: red; */
+  width:0px;
+  height: 30px;
+  overflow: hidden;
+  word-break: keep-all;
+  word-wrap: normal;
+  transition: all 1s;
+}
+.details span{
+  font-size: 18px;
+  color:white;
+}
+.developer_contain:hover .details{
+  width:250px;
+  transition: all 1s;
+  /* display: flex; */
+} 
+.developer_icon img{
+  height:40px;
+  width:40px;
+  border-radius: 100%;
+  object-fit: cover;
+  transition: all 1s;
+}
+.developer_icon img:hover{
+  box-shadow: 0 0 10px white;
+  transition: all 1s;
+}
+.toppanel{
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  height:60vh;
+  width: 100%;
+}
+.editor-container{
+  padding: 10px;
+  width:34%;
 
-.App-link {
-  color: #61dafb;
+  /* max-width: 35%; */
+  /* flex-grow: 1; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.editor-title{
+  color:white;
+  padding: 5px;
+  gap:10px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  /* background-color: yellow; */
+  /* justify-content: space-between; */
+}
+.editor-title i{
+  color:white;
+  font-size: 1.5rem;
+}
+
+.bottom-panel{
+  width:100%;
+  /* background-color: red; */
+  height: 50%;
+}
+.bottom-panel iframe{
+  height:100%;
+  width:100%;
+  outline: none;
+  border:none;
+}
+@media screen and (max-width:2561px){
+  .toppanel{
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
   }
 }
+@media screen and (max-width:376px){
+  .toppanel{
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  }
+  .editor-container{
+  width:90%;
+  }
+  .navbar{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height:60px;
+    /* background-color: yellow; */
+  }
+  .title_box{
+    height:100%;
+    display: flex;
+    align-items: center;
+    /* background-color: yellow; */
+  }
+  .title_box span{
+    font-size: 17px;
+  }
+  .developer_icon{
+    display: none;
+  }
+  .details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:30px;
+    width:100%;
+    background-color: black;
+  }
+  .details span{
+    color:white;
+  }
+  .details a{
+    color:white
+  }
+}
+@media screen and (max-width:426px){
+  .toppanel{
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  }
+  .editor-container{
+  width:90%;
+  }
+  .navbar{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height:60px;
+    /* background-color: yellow; */
+  }
+  .title_box{
+    height:100%;
+    display: flex;
+    align-items: center;
+    /* background-color: yellow; */
+  }
+  .title_box span{
+    font-size: 17px;
+  }
+  .developer_icon{
+    display: none;
+  }
+  .details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:30px;
+    width:100%;
+    background-color: black;
+  }
+  .details span{
+    color:white;
+  }
+  .details a{
+    color:white
+  }
+}
+
